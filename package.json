@@ -4,8 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": " tsc -w & nodemon app.js",
-    "server": "nodemon app.js"
+    "start": "node app.js",
+    "server": "ts-node & nodemon app.ts",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",

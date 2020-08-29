@@ -1,5 +1,8 @@
 import express from 'express';
+import config from 'config';
 
 const app: express.Express = express();
 
-app.listen(5000, () => console.log(`App has been started!!`));
+const PORT = config.get('port') || 5000;
+
+app.listen(PORT, () => console.log(`App has been started on port ${PORT}!!`));

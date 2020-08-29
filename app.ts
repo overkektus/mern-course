@@ -1,8 +1,12 @@
 import express from 'express';
 import config from 'config';
-import mongoose, { Error } from 'mongoose';
+import mongoose from 'mongoose';
+
+import { AuthRouter } from './routes';
 
 const app: express.Express = express();
+
+app.use('/api/auth', AuthRouter);
 
 const PORT = config.get('port') || 5000;
 

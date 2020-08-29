@@ -1,4 +1,5 @@
 {
   "port": 5000,
+  "jwtSecret": "superSecretJwt",
   "mongoUri": "mongodb://localhost:27017/mern-course"
 }
